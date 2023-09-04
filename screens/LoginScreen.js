@@ -1,4 +1,5 @@
 import {
+  Alert,
   KeyboardAvoidingView,
   Pressable,
   StyleSheet,
@@ -21,7 +22,7 @@ const LoginScreen = () => {
         const token = await AsyncStorage.getItem('authToken');
 
         if (token) {
-          navigation.replace('Home');
+          navigation.replace('BottomNavigation');
         } else {
           return false;
         }
